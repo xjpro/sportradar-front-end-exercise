@@ -1,7 +1,7 @@
 # sportradar-front-end-exercise
  > nhl profile dashboard
 
- Create an NHL team and player profile page.  The separation of concerns, number of components is entirely up to you. Likewise the amount of data displayed is up to you. However the following functionality is required.
+ Create an NHL team and player profile page.  The separation of concerns, number of components, and general approach is entirely up to you. Likewise the layout, design, amount of data displayed is up to you. However the following functionality is required.
 
 * A user  can select which team they are interested in viewing.
 * A user can deep link to a team profile.
@@ -38,19 +38,19 @@ https://assets.nhle.com/mugs/nhl/20192020/{team_abbreviation}/{playerId}.png
 
 Both Profile Pages should be **editable**. (you'll send the “update” to a mock service)
 
-This exercise is in-lieu of a traditional whiteboard/algorithm style type interview. Not only will this exercise serve as our inital evaluation of your programming skills, it will also be a center-piece to further conversations we will have with you. We respect your time and the fact that you have a life and possibly a day-job, so put in as much time as you feel will be a fair representation of your skills.  However, this exercise is purposefully open ended as an opportunity for you to show off. Hopefully this is something you can have fun with.
+This exercise is in-lieu of a traditional whiteboard/algorithm style type interview. Not only will this exercise serve as our inital evaluation of your development skills, it will also be a center-piece to further conversations we will have with you. We respect your time and the fact that you have a life and possibly a day-job, so put in as much time as you feel will be a fair representation of your skills.  However, this exercise is purposefully open ended and can be an opportunity for you to show off. Hopefully this is something you can have fun with.
 
 While the approach you take to meeting the above objectives is up to you, here are a couple of things we will expect:
 
-* The app should be written using React
+* The app should be developed using React
 * There should be a basic readme included.
 * There should be tests.
-* We should be able to run this locally.
+* We should be able to run this locally (provide instructions if need be).
 
-Please do not create a pull-request against this repository; you should create your own project/repository.  Also--while not required--it would be nice to have access to your commit history (i.e. don't squash) through github. However if you are not comforatble with this for any reason, submitting a zip file with the contenst of the project is acceptable as well.
+Please do not create a pull-request against this repository; you should create your own project/repository.  Also--while not required--it would be nice to have access to your commit history (i.e. don't squash) through github. However if you are not comforatble with this for any reason, submitting a zip file with the contents of the project is acceptable as well.
 
 
-Below you will find complete documentation to a public NHL API. You will not need the majority of these end points, they are provided for completeness. 
+Below you will find complete documentation to a public NHL API. You will not need the majority of these endpoints, they are provided for completeness. 
 
 
 [Teams](#teams)
