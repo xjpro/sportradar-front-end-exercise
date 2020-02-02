@@ -1,5 +1,5 @@
 # sportradar-front-end-exercise
- > nhl team profile dashboard
+ > nhl profile dashboard
 
  Create an NHL team and player profile page.  The separation of concerns, number of components is entirely up to you. Likewise the amount of data displayed is up to you. However the following functionality is required.
 
