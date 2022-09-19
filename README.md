@@ -48,17 +48,4 @@ While the approach you take to meeting the above objectives is up to you, here a
 
 Please do not create a pull-request against this repository; you should create your own project/repository.  Also--while not required--it would be nice to have access to your commit history (i.e. don't squash) through github. However if you are not comforatble with this for any reason, submitting a zip file with the contents of the project is acceptable as well.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[NHL API Documentation Summary](docs.md)
