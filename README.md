@@ -37,7 +37,7 @@ https://assets.nhle.com/mugs/nhl/20192020/{team_abbreviation}/{playerId}.png
 
 A nice to have would be a client side team and/or player search.
 
-This exercise is in-lieu of a traditional whiteboard/algorithm style type interview. Not only will this exercise serve as our inital evaluation of your development skills, it will also be a center-piece to further conversations we will have with you. We respect your time and the fact that you have a life and possibly a day-job, so put in as much time as you feel will be a fair representation of your skills.  However, this exercise is purposefully open ended and can be an opportunity for you to show off. Hopefully this is something you can have fun with.
+This exercise will serve as our inital evaluation of your development skills, it will also be a center-piece to further conversations we will have with you. We respect your time and the fact that you have a life and possibly a day-job, so put in as much time as you feel will be a fair representation of your skills.  However, this exercise is purposefully open ended and can be an opportunity for you to show off. Hopefully this is something you can have fun with.
 
 While the approach you take to meeting the above objectives is up to you, here are a couple of things we will expect:
 
