@@ -1,51 +1,34 @@
-# sportradar-front-end-exercise
- > nhl profile dashboard
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
- Create an NHL team and player profile page.  The separation of concerns, number of components, and general approach is entirely up to you. Likewise the layout, design, amount of data displayed is up to you. However the following functionality is required.
+## Getting Started
 
-* A user  can select which team they are interested in viewing.
-* A user can deep link to a team profile.
-* A user can deep link to a player profile. 
-* A team profile should at least include the following:
-  * The Team Name
-  * Team Logo*
-  * Team Conference
-  * Team Division
-  * And some way to access/see the current roster
+First, run the development server:
 
-* A Player Profile should include at least the following:
-  * Player Name
-  * Player Headshot**
-  * Current Team
-  * Player Age
-  * Player Number
-  * Player Position
-  * Player Shooting/catching hand
-  * Player Nationality
-  * Player Captain Status (i.e. is a captain or alternate captain)
-  * If the player is a rookie
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-*Team logos can be constructed via the following convention:
-http://www-league.nhlstatic.com/nhl.com/builds/site-core/d1b262bacd4892b22a38e8708cdb10c8327ff73e_1579810224/images/logos/team/current/team-{teamId}-light.svg
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-**Player Headshots can be constructed via the following convention:
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-https://nhl.bamcontent.com/images/headshots/current/168X168/{playerId}.jpg 
-https://nhl.bamcontent.com/images/headshots/current/168X168/{playerId}@2x.jpg 
-https://nhl.bamcontent.com/images/headshots/current/168X168/{playerId}@3x.jpg 
-https://assets.nhle.com/mugs/nhl/20192020/{team_abbreviation}/{playerId}.png
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-A nice to have would be a client side team and/or player search.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This exercise will serve as our inital evaluation of your development skills, it will also be a center-piece to further conversations we will have with you. We respect your time and the fact that you have a life and possibly a day-job, so put in as much time as you feel will be a fair representation of your skills.  However, this exercise is purposefully open ended and can be an opportunity for you to show off. Hopefully this is something you can have fun with.
+## Learn More
 
-While the approach you take to meeting the above objectives is up to you, here are a couple of things we will expect:
+To learn more about Next.js, take a look at the following resources:
 
-* The app should be developed using React
-* There should be a basic readme included.
-* There should be tests.
-* We should be able to run this locally (provide instructions if need be).
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Please do not create a pull-request against this repository; you should create your own project/repository.  Also--while not required--it would be nice to have access to your commit history (i.e. don't squash) through github. However if you are not comforatble with this for any reason, submitting a zip file with the contents of the project is acceptable as well.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-[NHL API Documentation Summary](doc.md)
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
