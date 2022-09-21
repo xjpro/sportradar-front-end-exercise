@@ -40,7 +40,6 @@ export interface Person {
   firstName: string;
   fullName: string;
   height: string;
-
   lastName: string;
   nationality: string;
   primaryPosition: {
