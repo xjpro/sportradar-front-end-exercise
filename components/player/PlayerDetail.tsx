@@ -59,7 +59,7 @@ export default function PlayerDetail() {
               </h1>
               {team && (
                 <div>
-                  <TeamLogo team={team} />{" "}
+                  <TeamLogo team={team} width={30} />{" "}
                   <Link href={`/team/${team.id}/${slug(team.name)}`}>
                     <a className="me-3">{team?.name}</a>
                   </Link>

@@ -23,13 +23,19 @@ export default function TeamDetail() {
         <title>{team?.name} - Sportradar</title>
       </Head>
 
+      <div className="mb-3">
+        <Link href="/">
+          Back to directory
+        </Link>
+      </div>
+
       {!team ? (
         <div>Loading...</div>
       ) : (
         <div>
           <div className="d-flex">
-            <div>
-              <TeamLogo team={team} />
+            <div className="me-1">
+              <TeamLogo team={team} width={48} />
             </div>
             <h1>{team.name}</h1>
           </div>
