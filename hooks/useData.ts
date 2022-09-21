@@ -10,15 +10,47 @@ export interface Team {
   officialSiteUrl: string;
   firstYearOfPlay: string;
   locationName: string;
-  venue: {
+  conference: {
+    id: number;
     name: string;
-    city: string;
+    link: string;
+  };
+  division: {
+    id: number;
+    name: string;
+    nameShort: string;
+    link: string;
   };
 }
 
-export interface ApiPayload {
+export interface Player {
+  jerseyNumber: string;
+  person: {
+    id: number;
+    fullName: string;
+    link: string;
+  };
+  position: {
+    code: string;
+    name: string;
+    abbreviation: string;
+  };
+}
+
+export interface RosteredTeam extends Team {
+  roster: {
+    roster: Player[];
+  };
+}
+
+export interface ApiTeamPayload {
   copyright: string;
   teams: [Team];
+}
+
+export interface ApiTeamRosterPayload {
+  copyright: string;
+  teams: [RosteredTeam];
 }
 
 export default function useData<Type>(url: string) {

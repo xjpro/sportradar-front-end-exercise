@@ -6,7 +6,7 @@ export default function Header() {
       <nav className="navbar  bg-dark text-light">
         <div className="container">
           <Link href="/">
-            <a className="navbar-brand">Sportsradar</a>
+            <a className="navbar-brand">Sportradar</a>
           </Link>
         </div>
       </nav>
