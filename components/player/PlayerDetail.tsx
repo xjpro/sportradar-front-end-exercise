@@ -10,11 +10,15 @@ import slug from "../../services/slug";
 import Link from "next/link";
 import PlayerImage from "./PlayerImage";
 import shootsText from "../../services/shootsText";
+import Head from "next/head";
 
 export default function PlayerDetail() {
-  const { query } = useRouter();
+  const router = useRouter();
+  const { query } = router;
   const playerPayload = useData<ApiPeoplePayload>(
-    `https://statsapi.web.nhl.com/api/v1/people/${query.playerId}`
+    router.isReady
+      ? `https://statsapi.web.nhl.com/api/v1/people/${query.playerId}`
+      : null
   );
   const person = first(playerPayload?.people);
   const teamPayload = useData<ApiTeamRosterPayload>(
@@ -38,6 +42,9 @@ export default function PlayerDetail() {
 
   return (
     <Layout>
+      <Head>
+        <title>{person?.fullName} - Sportradar</title>
+      </Head>
       <div>
         {!person ? (
           <div>Loading...</div>
@@ -61,7 +68,7 @@ export default function PlayerDetail() {
                   {!person.captain && !person.alternateCaptain && (
                     <span>{person.active ? "Active" : "Inactive"}</span>
                   )}
-                  {!person.rookie && <span className="ms-1">Rookie</span>}
+                  {person.rookie && <span className="ms-1">Rookie</span>}
                 </div>
               )}
               <div>

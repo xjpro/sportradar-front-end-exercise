@@ -5,23 +5,31 @@ import { first } from "lodash";
 import slug from "../../services/slug";
 import Link from "next/link";
 import TeamLogo from "../shared/TeamLogo";
+import Head from "next/head";
 
 export default function TeamDetail() {
-  const { query } = useRouter();
+  const router = useRouter();
+  const { query } = router;
   const payload = useData<ApiTeamRosterPayload>(
-    `https://statsapi.web.nhl.com/api/v1/teams/${query.teamId}?expand=team.roster`
+    router.isReady
+      ? `https://statsapi.web.nhl.com/api/v1/teams/${query.teamId}?expand=team.roster`
+      : null
   );
 
   const team = first(payload?.teams);
   return (
     <Layout>
+      <Head>
+        <title>{team?.name} - Sportradar</title>
+      </Head>
+
       {!team ? (
         <div>Loading...</div>
       ) : (
         <div>
           <div className="d-flex">
             <div>
-              <TeamLogo team={team}/>
+              <TeamLogo team={team} />
             </div>
             <h1>{team.name}</h1>
           </div>
@@ -33,20 +41,13 @@ export default function TeamDetail() {
               {team.officialSiteUrl}
             </a>
           </div>
-          <div>
+          <div className="mt-3">
+            <h2>Roster</h2>
             <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>Position</th>
-                  <th>Number</th>
-                  <th>Name</th>
-                </tr>
-              </thead>
               <tbody>
                 {team.roster.roster.map((player) => (
                   <tr className="position-relative" key={player.person.id}>
                     <td>{player.position.abbreviation}</td>
-                    <td>{player.jerseyNumber}</td>
                     <td>
                       <Link
                         href={`/player/${player.person.id}/${slug(
@@ -54,7 +55,7 @@ export default function TeamDetail() {
                         )}`}
                       >
                         <a className="btn btn-link stretched-link">
-                          {player.person.fullName}
+                          {player.person.fullName} #{player.jerseyNumber}
                         </a>
                       </Link>
                     </td>

@@ -3,6 +3,7 @@ import useData, { ApiTeamPayload } from "../../hooks/useData";
 import { groupBy, times, map } from "lodash";
 import Skeleton from "react-loading-skeleton";
 import LandingTeam from "./LandingTeam";
+import Head from "next/head";
 
 export default function Landing() {
   const payload = useData<ApiTeamPayload>(
@@ -15,6 +16,10 @@ export default function Landing() {
   );
   return (
     <Layout>
+      <Head>
+        <title>Team Directory - Sportradar</title>
+      </Head>
+
       <h1>Team Directory</h1>
       <div className="bg-light p-3">
         {!payload
