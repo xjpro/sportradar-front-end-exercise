@@ -14,7 +14,7 @@ export default function LandingTeam({ team }: Props) {
         <div className="me-3">
           <TeamLogo width={35} team={team} />
         </div>
-        <h4 className="d-flex flex-column justify-content-center mb-0">
+        <h4 className="d-flex flex-column justify-content-center mb-0" role="heading">
           {team.name}
         </h4>
       </a>
