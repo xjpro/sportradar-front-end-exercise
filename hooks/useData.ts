@@ -23,13 +23,41 @@ export interface Team {
   };
 }
 
+export interface Person {
+  id: number;
+  active: boolean;
+  alternateCaptain: boolean;
+  birthCity: string;
+  birthCountry: string;
+  birthDate: string;
+  birthStateProvince: string;
+  captain: boolean;
+  currentAge: number;
+  currentTeam: {
+    id: number;
+    name: string;
+  };
+  firstName: string;
+  fullName: string;
+  height: string;
+
+  lastName: string;
+  nationality: string;
+  primaryPosition: {
+    code: string;
+    name: string;
+    type: string;
+    abbreviation: string;
+  };
+  rookie: boolean;
+  rosterStatus: string;
+  shootsCatches: string;
+  weight: number;
+}
+
 export interface Player {
   jerseyNumber: string;
-  person: {
-    id: number;
-    fullName: string;
-    link: string;
-  };
+  person: Person;
   position: {
     code: string;
     name: string;
@@ -44,18 +72,20 @@ export interface RosteredTeam extends Team {
 }
 
 export interface ApiTeamPayload {
-  copyright: string;
   teams: [Team];
 }
 
 export interface ApiTeamRosterPayload {
-  copyright: string;
   teams: [RosteredTeam];
 }
 
-export default function useData<Type>(url: string) {
+export interface ApiPeoplePayload {
+  people: Person[];
+}
+
+export default function useData<Type>(url: string | null) {
   const { data, error } = useSWR(url, () =>
-    axios.get(url).then((response) => response.data)
+    axios.get(url || "").then((response) => response.data)
   );
   return data as Type;
 }

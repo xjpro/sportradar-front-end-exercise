@@ -9,7 +9,7 @@ export default function Layout({ children }: Props) {
   return (
     <div>
       <Header />
-      <div className="container mt-3">{children}</div>
+      <div className="container mt-3 min-vh-100">{children}</div>
       <Footer />
     </div>
   );
