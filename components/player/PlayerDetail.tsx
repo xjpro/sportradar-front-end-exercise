@@ -54,7 +54,7 @@ export default function PlayerDetail() {
               <div>
                 <PlayerImage person={person} />
               </div>
-              <h1>
+              <h1 role="heading">
                 {person.fullName} | #{teamMember?.jerseyNumber}
               </h1>
               {team && (
@@ -71,7 +71,7 @@ export default function PlayerDetail() {
                   {person.rookie && <span className="ms-1">Rookie</span>}
                 </div>
               )}
-              <div>
+              <div data-testid="player-attributes">
                 {person.primaryPosition.code} | {person.height} |{" "}
                 {person.weight} lb | Age {person.currentAge}
               </div>
