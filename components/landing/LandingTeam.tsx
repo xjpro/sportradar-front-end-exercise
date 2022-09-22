@@ -12,11 +12,13 @@ export default function LandingTeam({ team }: Props) {
     <Link href={`/team/${team.id}/${slug(team.name)}`}>
       <a className="list-group-item d-flex py-3" role="listitem">
         <div className="me-3">
-          <TeamLogo width={35} team={team} />
+          <TeamLogo width={30} team={team} />
         </div>
-        <h4 className="d-flex flex-column justify-content-center mb-0" role="heading">
-          {team.name}
-        </h4>
+        <div className="d-flex flex-column justify-content-center ">
+          <h2 className="fs-4 mb-0" role="heading">
+            {team.name}
+          </h2>
+        </div>
       </a>
     </Link>
   );

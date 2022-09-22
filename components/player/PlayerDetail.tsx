@@ -26,6 +26,7 @@ export default function PlayerDetail() {
       ? `https://statsapi.web.nhl.com/api/v1/teams/${person.currentTeam.id}?expand=team.roster`
       : null
   );
+
   const team = first(teamPayload?.teams);
   const teamMember = find(
     team?.roster.roster,
@@ -46,6 +47,14 @@ export default function PlayerDetail() {
         <title>{person?.fullName} - Sportradar</title>
       </Head>
       <div>
+        <div className="mb-3">
+          {team && (
+            <Link href={`/team/${team.id}/${slug(team.name)}`}>
+              Back to team
+            </Link>
+          )}
+        </div>
+
         {!person ? (
           <div>Loading...</div>
         ) : (
@@ -58,17 +67,25 @@ export default function PlayerDetail() {
                 {person.fullName} | #{teamMember?.jerseyNumber}
               </h1>
               {team && (
-                <div>
-                  <TeamLogo team={team} width={30} />{" "}
-                  <Link href={`/team/${team.id}/${slug(team.name)}`}>
-                    <a className="me-3">{team?.name}</a>
-                  </Link>
-                  {person.captain && <span>Captain</span>}
-                  {person.alternateCaptain && <span>Alt Captain</span>}
-                  {!person.captain && !person.alternateCaptain && (
-                    <span>{person.active ? "Active" : "Inactive"}</span>
-                  )}
-                  {person.rookie && <span className="ms-1">Rookie</span>}
+                <div className="d-flex justify-content-center mb-1">
+                  <div className="d-flex">
+                    <div className="me-1">
+                      <TeamLogo team={team} width={30} />
+                    </div>
+                    <div className="d-flex flex-column justify-content-center">
+                      <Link href={`/team/${team.id}/${slug(team.name)}`}>
+                        <a className="me-3">{team?.name}</a>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="d-flex flex-column justify-content-center">
+                    {person.captain && <span>Captain</span>}
+                    {person.alternateCaptain && <span>Alt Captain</span>}
+                    {!person.captain && !person.alternateCaptain && (
+                      <span>{person.active ? "Active" : "Inactive"}</span>
+                    )}
+                    {person.rookie && <span className="ms-1">Rookie</span>}
+                  </div>
                 </div>
               )}
               <div data-testid="player-attributes">
