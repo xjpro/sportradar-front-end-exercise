@@ -10,7 +10,7 @@ interface Props {
 export default function LandingTeam({ team }: Props) {
   return (
     <Link href={`/team/${team.id}/${slug(team.name)}`}>
-      <a className="list-group-item d-flex py-3" key={team.id}>
+      <a className="list-group-item d-flex py-3" role="listitem">
         <div className="me-3">
           <TeamLogo width={35} team={team} />
         </div>

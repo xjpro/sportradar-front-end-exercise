@@ -1,14 +1,17 @@
 import { Person } from "../../hooks/useData";
+import Image from "next/image";
 
 interface Props {
-  player: Person;
+  person: Person;
 }
 
-export default function PlayerImage({ player }: Props) {
+export default function PlayerImage({ person }: Props) {
   return (
-    <img
-      alt={player.fullName}
-      src={`https://cms.nhl.bamgrid.com/images/headshots/current/168x168/${player.id}.jpg`}
+    <Image
+      width={168}
+      height={168}
+      alt={person.fullName}
+      src={`https://cms.nhl.bamgrid.com/images/headshots/current/168x168/${person.id}.jpg`}
     />
   );
 }

@@ -52,7 +52,7 @@ export default function PlayerDetail() {
           <div>
             <div className="text-center mb-3">
               <div>
-                <PlayerImage player={person} />
+                <PlayerImage person={person} />
               </div>
               <h1>
                 {person.fullName} | #{teamMember?.jerseyNumber}

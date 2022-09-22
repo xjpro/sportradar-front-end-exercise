@@ -24,9 +24,7 @@ export default function TeamDetail() {
       </Head>
 
       <div className="mb-3">
-        <Link href="/">
-          Back to directory
-        </Link>
+        <Link href="/">Back to directory</Link>
       </div>
 
       {!team ? (
@@ -37,13 +35,13 @@ export default function TeamDetail() {
             <div className="me-1">
               <TeamLogo team={team} width={48} />
             </div>
-            <h1>{team.name}</h1>
+            <h1 role="heading">{team.name}</h1>
           </div>
           <div>
             {team.conference.name} Conference - {team.division.name} Division
           </div>
           <div>
-            <a href={team.officialSiteUrl} target="_blank">
+            <a href={team.officialSiteUrl} target="_blank" rel="noreferrer">
               {team.officialSiteUrl}
             </a>
           </div>
